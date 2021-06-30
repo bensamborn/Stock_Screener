@@ -1,4 +1,4 @@
 *.ipynb
-\.vscode\
-\_pycache_\
-\temp\
+/.vscode/
+/_pycache_/
+/temp/
