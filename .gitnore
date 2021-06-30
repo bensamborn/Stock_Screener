@@ -1,0 +1,4 @@
+*.ipynb
+\.vscode\
+\_pycache_\
+\temp\

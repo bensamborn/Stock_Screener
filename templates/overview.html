@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Stock Screener</title>
+</head>
+<body>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<div class="w3-bar w3-border w3-green">
+  <a href="Home" class="w3-bar-item w3-button w3-padding-16">Home</a>
+  <a href="About" class="w3-bar-item w3-button w3-padding-16">About</a>
+  <a href="https://www.w3schools.com/w3css/default.asp" class="w3-bar-item w3-button w3-padding-16">W3 Schools CSS</a>
+  <a href="mailto:bensamborn@comcast.net" class="w3-bar-item w3-button w3-padding-16">Email</a>
+  <form action="{{ url_for("Overview")}}" method="POST">
+	<input type="text" class="w3-bar-item w3-input" id="tname" name="tname" placeholder="Search.." style="height:55px; width:250px">
+  </form>
+</div><div class="w3-sidebar w3-bar-block" style="width:25%">
+  <a href="Overview" class="w3-bar-item w3-button">Overview</a>
+  <a href="IncomeStatement" class="w3-bar-item w3-button">Income Statement</a>
+  <a href="BalanceSheet" class="w3-bar-item w3-button">Balance Sheet</a>
+  <a href="PriceChart" class="w3-bar-item w3-button">Price Chart</a>
+</div>
+
+<div style="margin-left:25%">
+<h1>GOOG</h1><h2>Alphabet Inc. is an American multinational conglomerate headquartered in Mountain View, California. It was created through a restructuring of Google on October 2, 2015, and became the parent company of Google and several former Google subsidiaries. The two co-founders of Google remained as controlling shareholders, board members, and employees at Alphabet. Alphabet is the world's fourth-largest technology company by revenue and one of the world's most valuable companies.</h2><h3>1600 AMPHITHEATRE PARKWAY, MOUNTAIN VIEW, CA, US</h3><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Equity Information</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Symbol</th>
+      <td>GOOG</td>
+    </tr>
+    <tr>
+      <th>AssetType</th>
+      <td>Common Stock</td>
+    </tr>
+    <tr>
+      <th>Name</th>
+      <td>Alphabet Inc</td>
+    </tr>
+    <tr>
+      <th>CIK</th>
+      <td>1652044</td>
+    </tr>
+    <tr>
+      <th>Exchange</th>
+      <td>NASDAQ</td>
+    </tr>
+    <tr>
+      <th>Currency</th>
+      <td>USD</td>
+    </tr>
+    <tr>
+      <th>Country</th>
+      <td>USA</td>
+    </tr>
+    <tr>
+      <th>Sector</th>
+      <td>TECHNOLOGY</td>
+    </tr>
+    <tr>
+      <th>Industry</th>
+      <td>SERVICES-COMPUTER PROGRAMMING, DATA PROCESSING, ETC.</td>
+    </tr>
+    <tr>
+      <th>FiscalYearEnd</th>
+      <td>December</td>
+    </tr>
+    <tr>
+      <th>LatestQuarter</th>
+      <td>2021-03-31</td>
+    </tr>
+    <tr>
+      <th>MarketCapitalization</th>
+      <td>1657849774080</td>
+    </tr>
+    <tr>
+      <th>EBITDA</th>
+      <td>63002001408</td>
+    </tr>
+    <tr>
+      <th>PERatio</th>
+      <td>33.5799</td>
+    </tr>
+    <tr>
+      <th>PEGRatio</th>
+      <td>1.4781</td>
+    </tr>
+    <tr>
+      <th>BookValue</th>
+      <td>342.743</td>
+    </tr>
+    <tr>
+      <th>DividendPerShare</th>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>DividendYield</th>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>EPS</th>
+      <td>75.04</td>
+    </tr>
+    <tr>
+      <th>RevenuePerShareTTM</th>
+      <td>290.303</td>
+    </tr>
+    <tr>
+      <th>ProfitMargin</th>
+      <td>0.2612</td>
+    </tr>
+    <tr>
+      <th>OperatingMarginTTM</th>
+      <td>0.2526</td>
+    </tr>
+    <tr>
+      <th>ReturnOnAssetsTTM</th>
+      <td>0.1034</td>
+    </tr>
+    <tr>
+      <th>ReturnOnEquityTTM</th>
+      <td>0.2369</td>
+    </tr>
+    <tr>
+      <th>RevenueTTM</th>
+      <td>196682006528</td>
+    </tr>
+    <tr>
+      <th>GrossProfitTTM</th>
+      <td>97795000000</td>
+    </tr>
+    <tr>
+      <th>DilutedEPSTTM</th>
+      <td>75.04</td>
+    </tr>
+    <tr>
+      <th>QuarterlyEarningsGrowthYOY</th>
+      <td>1.662</td>
+    </tr>
+    <tr>
+      <th>QuarterlyRevenueGrowthYOY</th>
+      <td>0.344</td>
+    </tr>
+    <tr>
+      <th>AnalystTargetPrice</th>
+      <td>2625</td>
+    </tr>
+    <tr>
+      <th>TrailingPE</th>
+      <td>33.5799</td>
+    </tr>
+    <tr>
+      <th>ForwardPE</th>
+      <td>31.5457</td>
+    </tr>
+    <tr>
+      <th>PriceToSalesRatioTTM</th>
+      <td>9.4337</td>
+    </tr>
+    <tr>
+      <th>PriceToBookRatio</th>
+      <td>7.4002</td>
+    </tr>
+    <tr>
+      <th>EVToRevenue</th>
+      <td>7.9474</td>
+    </tr>
+    <tr>
+      <th>EVToEBITDA</th>
+      <td>20.8025</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>1.0174</td>
+    </tr>
+    <tr>
+      <th>52WeekHigh</th>
+      <td>2555.9199</td>
+    </tr>
+    <tr>
+      <th>52WeekLow</th>
+      <td>1406.55</td>
+    </tr>
+    <tr>
+      <th>50DayMovingAverage</th>
+      <td>2433.4197</td>
+    </tr>
+    <tr>
+      <th>200DayMovingAverage</th>
+      <td>2137.4185</td>
+    </tr>
+    <tr>
+      <th>SharesOutstanding</th>
+      <td>323580000</td>
+    </tr>
+    <tr>
+      <th>SharesFloat</th>
+      <td>583504913</td>
+    </tr>
+    <tr>
+      <th>SharesShort</th>
+      <td>3143232</td>
+    </tr>
+    <tr>
+      <th>SharesShortPriorMonth</th>
+      <td>2687846</td>
+    </tr>
+    <tr>
+      <th>ShortRatio</th>
+      <td>2.76</td>
+    </tr>
+    <tr>
+      <th>ShortPercentOutstanding</th>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>ShortPercentFloat</th>
+      <td>0.0054</td>
+    </tr>
+    <tr>
+      <th>PercentInsiders</th>
+      <td>5.952</td>
+    </tr>
+    <tr>
+      <th>PercentInstitutions</th>
+      <td>68.216</td>
+    </tr>
+    <tr>
+      <th>ForwardAnnualDividendRate</th>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>ForwardAnnualDividendYield</th>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>PayoutRatio</th>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>DividendDate</th>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>ExDividendDate</th>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>LastSplitFactor</th>
+      <td>10000000:1</td>
+    </tr>
+    <tr>
+      <th>LastSplitDate</th>
+      <td>2015-04-27</td>
+    </tr>
+  </tbody>
+</table></div></body></html>

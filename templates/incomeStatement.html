@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Stock Screener</title>
+</head>
+<body>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<div class="w3-bar w3-border w3-green">
+  <a href="Home" class="w3-bar-item w3-button w3-padding-16">Home</a>
+  <a href="About" class="w3-bar-item w3-button w3-padding-16">About</a>
+  <a href="https://www.w3schools.com/w3css/default.asp" class="w3-bar-item w3-button w3-padding-16">W3 Schools CSS</a>
+  <a href="mailto:bensamborn@comcast.net" class="w3-bar-item w3-button w3-padding-16">Email</a>
+  <form action="{{ url_for("Overview")}}" method="POST">
+	<input type="text" class="w3-bar-item w3-input" id="tname" name="tname" placeholder="Search.." style="height:55px; width:250px">
+  </form>
+</div><div class="w3-sidebar w3-bar-block" style="width:25%">
+  <a href="Overview" class="w3-bar-item w3-button">Overview</a>
+  <a href="IncomeStatement" class="w3-bar-item w3-button">Income Statement</a>
+  <a href="BalanceSheet" class="w3-bar-item w3-button">Balance Sheet</a>
+  <a href="PriceChart" class="w3-bar-item w3-button">Price Chart</a>
+</div>
+
+<div style="margin-left:25%">
+<h1>MSFT Income Statement</h1><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>2020</th>
+      <th>2019</th>
+      <th>2018</th>
+      <th>2017</th>
+      <th>2016</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>comprehensiveIncomeNetOfTax</th>
+      <td>47807000000</td>
+      <td>41154000000</td>
+      <td>13715000000</td>
+      <td>24322000000</td>
+      <td>19811000000</td>
+    </tr>
+    <tr>
+      <th>costOfRevenue</th>
+      <td>73159000000</td>
+      <td>67908000000</td>
+      <td>62776000000</td>
+      <td>34261000000</td>
+      <td>32780000000</td>
+    </tr>
+    <tr>
+      <th>costofGoodsAndServicesSold</th>
+      <td>46078000000</td>
+      <td>42910000000</td>
+      <td>38353000000</td>
+      <td>34261000000</td>
+      <td>32780000000</td>
+    </tr>
+    <tr>
+      <th>depreciation</th>
+      <td>10700000000</td>
+      <td>9700000000</td>
+      <td>7700000000</td>
+      <td>6100000000</td>
+      <td>4900000000</td>
+    </tr>
+    <tr>
+      <th>depreciationAndAmortization</th>
+      <td>2211000000</td>
+      <td>1900000000</td>
+      <td>2200000000</td>
+      <td>1700000000</td>
+      <td>978000000</td>
+    </tr>
+    <tr>
+      <th>ebit</th>
+      <td>55627000000</td>
+      <td>46374000000</td>
+      <td>39207000000</td>
+      <td>32123000000</td>
+      <td>26882000000</td>
+    </tr>
+    <tr>
+      <th>ebitda</th>
+      <td>57838000000</td>
+      <td>48274000000</td>
+      <td>41407000000</td>
+      <td>33823000000</td>
+      <td>27860000000</td>
+    </tr>
+    <tr>
+      <th>fiscalDateEnding</th>
+      <td>2020-06-30</td>
+      <td>2019-06-30</td>
+      <td>2018-06-30</td>
+      <td>2017-06-30</td>
+      <td>2016-06-30</td>
+    </tr>
+    <tr>
+      <th>grossProfit</th>
+      <td>96937000000</td>
+      <td>82933000000</td>
+      <td>72007000000</td>
+      <td>62310000000</td>
+      <td>58374000000</td>
+    </tr>
+    <tr>
+      <th>incomeBeforeTax</th>
+      <td>53036000000</td>
+      <td>43688000000</td>
+      <td>36474000000</td>
+      <td>29901000000</td>
+      <td>25639000000</td>
+    </tr>
+    <tr>
+      <th>incomeTaxExpense</th>
+      <td>8755000000</td>
+      <td>4448000000</td>
+      <td>19903000000</td>
+      <td>4412000000</td>
+      <td>5100000000</td>
+    </tr>
+    <tr>
+      <th>interestAndDebtExpense</th>
+      <td>2591000000</td>
+      <td>2686000000</td>
+      <td>2733000000</td>
+      <td>2222000000</td>
+      <td>1243000000</td>
+    </tr>
+    <tr>
+      <th>interestExpense</th>
+      <td>2591000000</td>
+      <td>2686000000</td>
+      <td>2733000000</td>
+      <td>2222000000</td>
+      <td>1243000000</td>
+    </tr>
+    <tr>
+      <th>interestIncome</th>
+      <td>2680000000</td>
+      <td>812000000</td>
+      <td>1522000000</td>
+      <td>1182000000</td>
+      <td>78000000</td>
+    </tr>
+    <tr>
+      <th>investmentIncomeNet</th>
+      <td>2680000000</td>
+      <td>2762000000</td>
+      <td>2214000000</td>
+      <td>1387000000</td>
+      <td>903000000</td>
+    </tr>
+    <tr>
+      <th>netIncome</th>
+      <td>44281000000</td>
+      <td>39240000000</td>
+      <td>16571000000</td>
+      <td>25489000000</td>
+      <td>20539000000</td>
+    </tr>
+    <tr>
+      <th>netIncomeFromContinuingOperations</th>
+      <td>44281000000</td>
+      <td>39240000000</td>
+      <td>16571000000</td>
+      <td>21204000000</td>
+      <td>16798000000</td>
+    </tr>
+    <tr>
+      <th>netInterestIncome</th>
+      <td>-2591000000</td>
+      <td>-2686000000</td>
+      <td>-2733000000</td>
+      <td>-2222000000</td>
+      <td>-1243000000</td>
+    </tr>
+    <tr>
+      <th>nonInterestIncome</th>
+      <td>143094000000</td>
+      <td>126181000000</td>
+      <td>109955000000</td>
+      <td>-674000000</td>
+      <td>-564000000</td>
+    </tr>
+    <tr>
+      <th>operatingExpenses</th>
+      <td>46350000000</td>
+      <td>41874000000</td>
+      <td>39149000000</td>
+      <td>35063000000</td>
+      <td>33357000000</td>
+    </tr>
+    <tr>
+      <th>operatingIncome</th>
+      <td>52959000000</td>
+      <td>42959000000</td>
+      <td>35058000000</td>
+      <td>29025000000</td>
+      <td>26078000000</td>
+    </tr>
+    <tr>
+      <th>otherNonOperatingIncome</th>
+      <td>-40000000</td>
+      <td>-57000000</td>
+      <td>-59000000</td>
+      <td>-251000000</td>
+      <td>-195000000</td>
+    </tr>
+    <tr>
+      <th>reportedCurrency</th>
+      <td>USD</td>
+      <td>USD</td>
+      <td>USD</td>
+      <td>USD</td>
+      <td>USD</td>
+    </tr>
+    <tr>
+      <th>researchAndDevelopment</th>
+      <td>19269000000</td>
+      <td>16876000000</td>
+      <td>14726000000</td>
+      <td>13037000000</td>
+      <td>11988000000</td>
+    </tr>
+    <tr>
+      <th>sellingGeneralAndAdministrative</th>
+      <td>24709000000</td>
+      <td>23098000000</td>
+      <td>22223000000</td>
+      <td>20020000000</td>
+      <td>19260000000</td>
+    </tr>
+    <tr>
+      <th>totalRevenue</th>
+      <td>140503000000</td>
+      <td>123495000000</td>
+      <td>107222000000</td>
+      <td>96571000000</td>
+      <td>91154000000</td>
+    </tr>
+  </tbody>
+</table></div></body></html>

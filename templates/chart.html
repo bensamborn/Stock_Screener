@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Stock Screener</title>
+    <!-- import plugin script -->
+    <script src='static/Chart.min.js'></script>
+  </head>
+  <body>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+	<div class="w3-bar w3-border w3-green">
+	  <a href="Home" class="w3-bar-item w3-button w3-padding-16">Home</a>
+	  <a href="About" class="w3-bar-item w3-button w3-padding-16">About</a>
+	  <a href="https://www.w3schools.com/w3css/default.asp" class="w3-bar-item w3-button w3-padding-16">W3 Schools CSS</a>
+	  <a href="mailto:bensamborn@comcast.net" class="w3-bar-item w3-button w3-padding-16">Email</a>
+	  <form action="{{ url_for("Overview")}}" method="POST">
+		<input type="text" class="w3-bar-item w3-input" id="tname" name="tname" placeholder="Search.." style="height:55px; width:250px">
+	  </form>
+	</div>
+    
+  <div class="w3-sidebar w3-bar-block" style="width:25%">
+    <a href="Overview" class="w3-bar-item w3-button">Overview</a>
+    <a href="IncomeStatement" class="w3-bar-item w3-button">Income Statement</a>
+    <a href="BalanceSheet" class="w3-bar-item w3-button">Balance Sheet</a>
+    <a href="PriceChart" class="w3-bar-item w3-button">Price Chart</a>
+  </div>
+
+	<div style="margin-left:25%">
+
+      <h1>{{ ticker }} 1 Year Price Chart</h1>
+      <!-- bar chart canvas element -->
+      <div></div><canvas id="myChart" width="600" height="400"></canvas></body></div>
+	  <div style="margin-left:25%">
+        <p id="caption">Price Chart - Powered by Chart.js and AlphaVantage</p>
+	  </div>
+
+    <script>
+      // Global parameters:
+      // do not resize the chart canvas when its container does (keep at 600x400px)
+      Chart.defaults.global.responsive = false;
+
+      // define the chart data
+      var chartData = {
+        labels : [{% for item in labels %}
+                   "{{item}}",
+                  {% endfor %}],
+        datasets : [{
+            label: '{{ legend }}',
+            fill: true,
+            lineTension: 0.1,
+            backgroundColor: "rgba(75,192,192,0.4)",
+            borderColor: "rgba(75,192,192,1)",
+            borderCapStyle: 'butt',
+            borderDash: [],
+            borderDashOffset: 0.0,
+            borderJoinStyle: 'miter',
+            pointBorderColor: "rgba(75,192,192,1)",
+            pointBackgroundColor: "#fff",
+            pointBorderWidth: 1,
+            pointHoverRadius: 5,
+            pointHoverBackgroundColor: "rgba(75,192,192,1)",
+            pointHoverBorderColor: "rgba(220,220,220,1)",
+            pointHoverBorderWidth: 2,
+            pointRadius: 1,
+            pointHitRadius: 10,
+            data : [{% for item in values %}
+                      {{item}},
+                    {% endfor %}],
+            spanGaps: false
+        }]
+      }
+
+      // get chart canvas
+      var ctx = document.getElementById("myChart").getContext("2d");
+
+      // create the chart using the chart canvas
+      var myChart = new Chart(ctx, {
+        type: 'line',
+        data: chartData,
+      });
+    </script>
+    </div>
+  </body>
+</html>
