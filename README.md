@@ -25,7 +25,7 @@ def getKey():
 It is important to note that the Alpha Vantage API only allows for 5 calls/minute with a free key. The code will throw an exception if the limit is exceeded. 
 # Interface
 The home page is featured below:
-![Home Page](/screenshots/home1.PNG)
+![Home Page](/screenshots/home.PNG)
 Search results of a valid ticker:
 ![Search Results](/screenshots/results.PNG)
 # Improvements
