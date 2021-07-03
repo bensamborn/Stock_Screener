@@ -1,5 +1,4 @@
 import pandas as pd  
-import numpy as np
 from flask import Flask, render_template, request
 from datetime import datetime
 
@@ -9,6 +8,9 @@ from companyInfo import getBalance
 from priceData import timeSeries
 
 app = Flask(__name__)
+
+# Make ticker search result global
+global ticker
 
 # Render index on startup and Home page
 @app.route("/", methods =["GET", "POST"])
@@ -54,7 +56,7 @@ def Overview():
     # Write in company ticker, description, and address
     f.write('<h1>' + str(ticker) + '</h1>')
     f.write('<h2>' + des + '</h2>')
-    f.write('<h3>' + IncAdd + '</h3>')
+    f.write('<h3>Adress: ' + IncAdd + '</h3>')
     f.write(tbl)
     f.write('</div>')
     f.write('</body>')
@@ -65,6 +67,7 @@ def Overview():
 
 @app.route("/PriceChart",methods =["GET", "POST"])
 def chart():
+
     # Get price data
     legend = 'Price Data'
     data = timeSeries(ticker)
